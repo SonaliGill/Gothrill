@@ -1,11 +1,11 @@
-import Menu from"./components/Menu.jsx";
+/*import Menu from"./components/Menu.jsx";*/
 
 function App() {
  
 
   return(
       <>
-    <Menu />
+ 
       </>
 
   )
