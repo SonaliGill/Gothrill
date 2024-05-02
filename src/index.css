@@ -201,7 +201,7 @@ body {
 
   font-size: 120px;
   color: rgba(225, 225, 225, .01);
-  background:black;
+  background-image:url("https://images.unsplash.com/photo-1713528197472-7b7f7dbb5bb4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 
 
   background-clip: text;
@@ -236,7 +236,6 @@ body {
   height: 20px;
   width: 20px;
   border-radius: 24px;
- 
   position: fixed;
   top: 0;
   left: 0;
@@ -325,7 +324,7 @@ body {
 
 
 .txt {
-  color: black;
+  color: #242323;
 }
 
 /* First Wrap Background */
