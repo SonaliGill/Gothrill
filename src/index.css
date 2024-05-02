@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(195, 186, 186);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    position: absolute;
+    top: 14px;
+    left: 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 21px;
+    z-index: 99;
+    color: rgb(116, 116, 116);
+
+
+  }
+
+  .fullscreen-bg__video {
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+
+  }
+
+
+
+  #menuBtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+    height: auto;
+
+    input {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      z-index: 9;
+
+      &:checked~span {
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateY(-5px)
+        }
+
+        &:nth-child(3) {
+          transform: rotate(45deg)
+        }
+
+        &:nth-child(4) {
+          display: block;
+          transform: rotate(135deg);
+          opacity: 1;
+          margin-top: -3px;
+        }
+
+        &:nth-child(5) {
+          opacity: 0;
+          transform: translateY(5px)
+        }
+
+
+      }
+    }
+
+    span {
+      width: 35px;
+      height: 3px;
+      background: rgb(157, 155, 155);
+      position: relative;
+      display: block;
+      margin: 3px 0;
+      border-radius: 2px;
+      transition: all .2s linear;
+
+      &:nth-child(3) {
+        width: 25px;
+        margin-bottom: auto;
+      }
+
+      &:nth-child(4) {
+        width: 25px;
+        opacity: 0;
+        margin: 0;
+      }
+    }
+
+  }
+
+  .left {
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    transition: all 0.4s linear;
+    transform: translateY(100vh);
+    background-color: #363636;
+    background: url('');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    z-index: 9;
+
+
+  }
+
+  .right {
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    transition: all .4s linear;
+    transform: translateY(-100vh);
+    background: RGBA(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9;
+
+    a {
+      text-decoration: none;
+      display: block;
+      font-weight: 900;
+      font-size: 27px;
+      -webkit-text-stroke: 2px rgb(245, 239, 239);
+      stroke: 2px white;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      position: relative;
+      opacity: 0.5;
+      transition: all .2s linear;
+
+      &:hover {
+        opacity: 1;
+        animation: shake 0.2s;
+
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.text-container {
+
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container h1 {
+
+  font-size: 120px;
+  color: rgba(225, 225, 225, .01);
+  background-image: url("./img/lib.jpg");
+
+
+  background-clip: text;
+  animation: animate 15s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    background-position: left top;
+  }
+
+  25% {
+    background-position: right bottom;
+  }
+
+  50% {
+    background-position: left bottom;
+  }
+
+  75% {
+    background-position: right top;
+  }
+}
+
+/*********************cursor effect****************/
+.circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+  /* so that it stays on top of all other elements */
+}
+
+/**************************************/
+section p {
+  position: relative;
+  color: #2d374e;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Helvetica, Verdana, sans-serif;
+  opacity: 0.5;
+  width: 100vw;
+  text-align: center;
+
+}
+
+.bg-pic {
+  overflow: hidden;
+  align-self: last baseline;
+  background-position: 50% 50%;
+  align-content: flex-start;
+  width: 100vw;
+  height: 100%;
+}
+
+
+
+
+
+/*---------------------------------*/
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* Resize in Mobile View */
+
+@media (min-width: 0) and (max-width: 767px) {
+
+  p,
+  .body-text {
+    font-size: 10px !important;
+  }
+
+  .down-arrow {
+    font-size: 20px !important;
+  }
+}
+
+/* Resize in Tablet View */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  p,
+  .body-text {
+    font-size: 15px !important;
+  }
+
+  .down-arrow {
+    font-size: 30px !important;
+  }
+}
+
+
+
+
+
+
+
+/* Line Separators CSS */
+
+.line-separator {
+  display: block;
+  width: 50%;
+  height: 1px;
+  text-align: center;
+  margin: 20px auto;
+  border-bottom: 1px solid grey;
+}
+
+
+.txt {
+  color: #242323;
+}
+
+/* First Wrap Background */
+
+.first-wrap {
+  height: 100%;
+  width: 100vw;
+  background: #ffffff url("https://images.unsplash.com/photo-1496482475496-a91f31e0386c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat fixed;
+  background-size: cover;
+  background-position: 40% 40%;
+}
+
+/* Second Wrap Background */
+
+.second-wrap {
+  height: 100%;
+  width: 100vw;
+  background: #ffffff url("https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=950&q=80&w=1920") no-repeat fixed;
+  background-size: cover;
+  background-position: 80% 80%;
+}
+
+/* Third Wrap Background */
+
+.third-wrap {
+  height: 100%;
+  width: 100vw;
+  background: #ffffff url("https://images.unsplash.com/photo-1558369178-6556d97855d0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.first-div {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+
+  .first-inner-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+
+    .down-arrow {
+      font-size: 40px;
+      color: #fff;
+    }
+
+    p {
+      padding: 20px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.second-div {
+  display: table;
+  height: 50vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+  }
+}
+
+.third-div {
+  display: table;
+  height: 50vh;
+  width: 100vw;
+  background-color: transparent;
+}
+
+.fourth-div {
+  display: table;
+
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+  }
+}
+
+.fifth-div {
+  display: table;
+  height: 50vh;
+  width: 100vw;
+  background-color: transparent;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+#back-to-top:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+;
+
+
+div {
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  margin: 30px;
+  font-size: 40px;
+}
+
+.heading {
+  color: rgb(234, 230, 230);
+}
+
+.color-text {
+  color: #707e8d;
+  ;
+}
+
+button {
+  margin: 30px;
+  margin-top: 5px;
+  width: 180px;
+  padding: 20px;
+  border: 0;
+  color: white;
+  border-radius: 25px;
+  background-color: #707e8d;
+  animation: forwards;
+}
+
+button:hover {
+  background-color: rgb(78, 77, 77);
+}
+
+.dest {
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1em;
+  z-index: 999;
+}
+
+
+.card {
+  margin-top: 20px;
+  border-radius: 25px;
+  z-index: 999;
+  min-width: 240px;
+  flex: 1;
+  height: 300px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.card:nth-child(1) {
+  min-width: 300px;
+  height: auto;
+}
+
+.card:nth-child(2) {
+  background-image: url(https://cdn.vectorstock.com/i/preview-1x/13/34/cartoon-apocalyptic-city-landscape-with-destroyed-vector-38931334.jpg);
+}
+
+.card:nth-child(3) {
+  background-image: url(https://img.freepik.com/free-vector/city-destroy-war-zone-abandoned-buildings-bridge-with-smoke-cataclysm-destruction-natural-disaster-post-apocalyptic-world-ruins-with-broken-road-street-cartoon-illustration_107791-3826.jpg);
+}
+
+.card:nth-child(4) {
+  background-image: url(https://img.freepik.com/free-vector/nuclear-bomb-explosion-ruined-city-vector_1441-3840.jpg);
+}
+
+.card .text {
+  position: absolute;
+  bottom: 5px;
+  color: white;
+  left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    height: 100%;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  .box {
+    display: none;
+  }
+}
