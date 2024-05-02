@@ -325,7 +325,7 @@ body {
 
 
 .txt {
-  color: #242323;
+  color: black;
 }
 
 /* First Wrap Background */
@@ -378,7 +378,7 @@ body {
       color: #fff;
     }
 
-    p {
+    p {color:white;
       padding: 20px;
       letter-spacing: 0.45em;
       text-transform: uppercase;
