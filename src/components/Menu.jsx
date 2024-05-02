@@ -1,6 +1,6 @@
 
 import React from 'react';
-import styled from "styled-components";
+//import styled from "styled-components";
 const COLORS = {
     primaryDark: "#115b4c",
     primaryLight: "#B6EDC8",
