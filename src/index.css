@@ -232,18 +232,6 @@ body {
   }
 }
 
-/*********************cursor effect****************/
-.circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 24px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 99999999;
-  /* so that it stays on top of all other elements */
-}
 
 /**************************************/
 section p {
